@@ -31,7 +31,6 @@ app.get('/api/:rapperName', (req, res) => {
 	} else {
 		res.json(rappers.Dylan)
 	}
-	res.json(rappers)
 })
 
 app.listen(process.env.PORT || PORT, () =>
