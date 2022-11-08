@@ -25,8 +25,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/:rapperName', (req, res) => {
-	const rappersName = req.params.rapperName
-	if (rappers[rappersName].toLowerCase() == rappersName.toLowerCase()) {
+	const rappersName = req.params.rapperName.toLowerCase()
+	if (rappers[rappersName]) {
 		res.json(rappers[rappersName])
 	} else {
 		res.json(rappers.Dylan)
